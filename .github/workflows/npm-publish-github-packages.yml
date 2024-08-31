@@ -1,6 +1,6 @@
 # GitHub Actions workflow to build and deploy the application
 
-name: CI/CD Pipeline
+name: Node.js Package
 
 on:
   push:
