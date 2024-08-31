@@ -1,20 +1,19 @@
 # GitHub Actions workflow to build and deploy the application
 
-name: Node.js Package
+name: CI/CD Pipeline
 
 on:
   push:
     branches:
-      - master
-      - develop
       - main
+      - develop
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        branch: [master, develop, main]
+        branch: [main, develop]
     if: github.ref == 'refs/heads/' + matrix.branch
     steps:
       - uses: actions/checkout@v4
@@ -40,12 +39,13 @@ jobs:
           node-version: 20
       - run: yarn install
       - run: yarn build
-      - name: Deploy to Production on GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: build
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to Production
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        run: |
+          aws s3 sync build/ s3://$AWS_S3_BUCKET_NAME --delete
 
   deploy-dev:
     runs-on: ubuntu-latest
@@ -58,9 +58,10 @@ jobs:
           node-version: 20
       - run: yarn install
       - run: yarn build
-      - name: Deploy to Dev Server on GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages-dev
-          folder: build
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to Dev Server
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        run: |
+          aws s3 sync build/ s3://$AWS_S3_BUCKET_DEV_NAME --delete
