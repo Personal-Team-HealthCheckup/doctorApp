@@ -1,2 +1,3 @@
 # doctorAppWep
-doctor app using  React + next + typescirpt for Web
+
+doctor app using React + nextjs + typescirpt for Web
