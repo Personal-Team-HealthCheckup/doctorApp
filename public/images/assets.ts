@@ -1,0 +1,1 @@
+export const healthcareLogo = require("./healthcareLogo.svg")
