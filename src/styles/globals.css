@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Tera:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,20 +15,20 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #ECECEC;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .tab{
+    @apply  rounded-md  text-[20px] font-normal font-tara  text-black hover:bg-gray-700 hover:text-white;
+  }
+  .button{
+    @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
   }
 }

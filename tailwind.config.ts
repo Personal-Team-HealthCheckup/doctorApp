@@ -8,6 +8,10 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      tara: ["Lexend Tera", 'sans-serif'],
+      lato: ["Lato", 'serif'],
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
