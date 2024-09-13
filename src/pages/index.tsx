@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react'
+import "../styles/globals.css";
 import Header from '../components/Header';
 interface HomePageProps {
 
@@ -23,7 +24,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
                     content="Doctor App - Dashboard."
                 ></meta>
             </Head>
-            <main className='flex min-h-screen min-w-max bg-[#ECECEC] lg:pb-24'>
+            <main>
                 <Header />
             </main>
         </>);
