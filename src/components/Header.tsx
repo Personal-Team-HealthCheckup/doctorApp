@@ -1,5 +1,4 @@
 import { healthcareLogo } from '@/public/images/assets'
-import Head from 'next/head'
 import Image from 'next/image'
 import React, { Component } from 'react'
 const navLinks=[
@@ -27,9 +26,9 @@ export default class Header extends Component {
                     </svg>
                   </button>
                 </div>
-                <div className="flex items-center  w-[100%] sm:items-stretch sm:justify-start md:justify-between">
+                <div className="flex items-center  w-[100%] sm:items-center sm:justify-start md:justify-between">
                   <div className="flex flex-shrink-0  items-center">
-                    <Image className="h-8 w-auto" src={healthcareLogo} alt="doctor app logo" />
+                    <Image className="h-9 w-auto" src={healthcareLogo} alt="doctor app logo" />
                   </div>
                   <div className="hidden  sm:flex flex-1 justify-center">
                     <div className="flex space-x-4">
@@ -41,7 +40,7 @@ export default class Header extends Component {
                   <div className="hidden  sm:flex">
                     <div className="flex space-x-4">
                     <button type="button" className="button">signup</button>
-                    <button type="button" className="button">login</button>
+                    <button type="button" className="button-login">login</button>
                     </div>
                   </div>
                 </div>

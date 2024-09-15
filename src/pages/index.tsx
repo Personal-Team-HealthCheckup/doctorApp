@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react'
 import "../styles/globals.css";
 import Header from '../components/Header';
+import Banner from '../components/Banner';
 interface HomePageProps {
 
 }
@@ -26,6 +27,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
             </Head>
             <main>
                 <Header />
+                <Banner />
             </main>
         </>);
     }

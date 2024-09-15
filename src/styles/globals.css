@@ -17,18 +17,29 @@
   }
 } */
 
-body {
-  background: #ECECEC;
+
+@layer base{
+  body {
+    background: #ECECEC;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-  .tab{
-    @apply  rounded-md  text-[20px] font-normal font-tara  text-black hover:bg-gray-700 hover:text-white;
+  .tab {
+    @apply text-xl font-normal font-tara text-black  hover:text-primary relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-primary after:transition-transform after:duration-300 after:transform after:scale-x-0 hover:after:scale-x-100; 
+    transition:border-color 0.3s ease;
   }
+  
   .button{
-    @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
+    @apply text-primary bg-transparent hover:bg-primary hover:text-white  font-tara  font-medium  rounded-lg text-xl px-5 py-2.5 me-2 mb-2 ;
+  }
+  .button-login{
+    @apply text-white bg-primary hover:bg-transparent  hover:text-primary  font-tara  font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2;
+  }
+  .banner-box-2{
+    @apply bg-transparent bg-banner-pattern h-screen bg-contain bg-no-repeat bg-center  flex align-middle justify-center ;
   }
 }
