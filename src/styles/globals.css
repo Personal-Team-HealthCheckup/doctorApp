@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Tera:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+
+@layer base{
+  body {
+    background: #ECECEC;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .tab {
+    @apply text-xl font-normal font-tara text-black  hover:text-primary relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-primary after:transition-transform after:duration-300 after:transform after:scale-x-0 hover:after:scale-x-100; 
+    transition:border-color 0.3s ease;
+  }
+  
+  .button{
+    @apply text-primary bg-transparent hover:bg-primary hover:text-white  font-tara  font-medium  rounded-lg text-xl px-5 py-2.5 me-2 mb-2 ;
+  }
+  .button-login{
+    @apply text-white bg-primary hover:bg-transparent  hover:text-primary  font-tara  font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2;
+  }
+  .banner-box-2{
+    @apply bg-transparent bg-banner-pattern h-screen bg-contain bg-no-repeat bg-center  flex align-middle justify-center ;
+  }
+}
