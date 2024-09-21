@@ -8,6 +8,9 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     fontFamily: {
       tara: ["Lexend Tera", 'sans-serif'],
       lato: ["Lato", 'serif'],
@@ -16,6 +19,9 @@ const config: Config = {
       ...colors,
       transparent: 'transparent',
       primary: '#007E85',
+      secondary:"#6EAB36",
+      info: "#000000B2",
+      "black-300":"#333333",
     },
     extend: {
       backgroundImage: {

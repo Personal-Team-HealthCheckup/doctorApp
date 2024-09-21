@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react'
-import "../styles/globals.css";
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 interface HomePageProps {
@@ -25,7 +24,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
                     content="Doctor App - Dashboard."
                 ></meta>
             </Head>
-            <main>
+            <main className='w-full'>
                 <Header />
                 <Banner />
             </main>
