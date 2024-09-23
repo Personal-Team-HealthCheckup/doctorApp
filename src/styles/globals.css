@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Tera:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -41,5 +42,8 @@
   }
   .banner-box-2{
     @apply bg-transparent bg-banner-pattern h-screen bg-contain bg-no-repeat bg-center  flex align-middle justify-center ;
+  }
+  .textInput{
+    @apply  !border-solid !border-primary !border text-xl bg-white !text-black-300 !placeholder-black-500  p-2.5 h-14  font-DM_Sans font-normal focus:ring-primary focus:border-primary dark:focus:ring-primary rounded dark:focus:border-primary w-96;
   }
 }

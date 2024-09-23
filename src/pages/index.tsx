@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react'
 import Header from '../components/Header';
 import Banner from '../components/Banner';
+import FindDoctor from '../components/FindDoctor';
 interface HomePageProps {
 
 }
@@ -27,6 +28,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
             <main className='w-full'>
                 <Header />
                 <Banner />
+                <FindDoctor />
             </main>
         </>);
     }

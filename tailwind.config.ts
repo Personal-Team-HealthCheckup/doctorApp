@@ -14,6 +14,8 @@ const config: Config = {
     fontFamily: {
       tara: ["Lexend Tera", 'sans-serif'],
       lato: ["Lato", 'serif'],
+      "DM_Sans": ["DM Sans", 'sans-serif'],
+      
     },
     colors:{
       ...colors,
@@ -22,6 +24,7 @@ const config: Config = {
       secondary:"#6EAB36",
       info: "#000000B2",
       "black-300":"#333333",
+      "black-500":"#555555",
     },
     extend: {
       backgroundImage: {
