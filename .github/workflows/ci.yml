@@ -16,6 +16,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -34,6 +35,14 @@ jobs:
     - name: Build Project
       run: |
         yarn run build
+
+    - name: SonarQube Scan
+      uses: sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} 
+        SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }} 
+        SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }} 
 
     - name: Deploy to Vercel
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
