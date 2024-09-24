@@ -25,7 +25,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
                 ></meta>
             </Head>
             <main className='w-full'>
-                <Header />
+               
                 <Banner />
             </main>
         </>);

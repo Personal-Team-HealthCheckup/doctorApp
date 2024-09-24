@@ -2,8 +2,8 @@ import { healthcareLogo } from '@/public/images/assets'
 import Image from 'next/image'
 import React, { Component } from 'react'
 const navLinks=[
-  {id:1,title:"Home",link:"#"},
-  {id:1,title:"Service",link:"#"},
+  {id:1,title:"Home",link:"/"},
+  {id:1,title:"Service",link:"/Service"},
   {id:2,title:"Contact Us",link:"#"},
   {id:2,title:"Help",link:"#"},
   {id:2,title:"Blog",link:"#"},
