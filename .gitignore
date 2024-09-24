@@ -8,6 +8,7 @@
 
 # testing
 /coverage
+__tests__/**/__snapshots__/
 
 # next.js
 /.next/
@@ -36,4 +37,3 @@ yarn-error.log*
 next-env.d.ts
 yarn.lock
 package-lock.json
-./__tests__/__snapshots__
