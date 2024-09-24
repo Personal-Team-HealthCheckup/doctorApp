@@ -1,3 +1,4 @@
+import { Montserrat } from "next/font/google";
 import type { Config } from "tailwindcss";
 const colors = require('tailwindcss/colors')
 const config: Config = {
@@ -15,7 +16,7 @@ const config: Config = {
       tara: ["Lexend Tera", 'sans-serif'],
       lato: ["Lato", 'serif'],
       "DM_Sans": ["DM Sans", 'sans-serif'],
-      
+      Montserrat: [ "Montserrat", "sans-serif"]
     },
     colors:{
       ...colors,
@@ -32,6 +33,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          
       },
     },
   },
