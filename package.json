@@ -1,6 +1,6 @@
 {
-  "name": "health-web-app",
-  "version": "0.1.0",
+  "name": "healthCare",
+  "version": "0.2.0",
   "private": true,
   "main": "./src",
   "scripts": {
