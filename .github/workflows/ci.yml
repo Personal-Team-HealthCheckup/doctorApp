@@ -33,7 +33,7 @@ jobs:
     
     - name: Build Project
       run: |
-        yarn run build --if-present
+        yarn run build
 
     - name: Deploy to Vercel
       env:
