@@ -33,7 +33,7 @@ export default class Header extends Component {
                   <div className="hidden  sm:flex flex-1 justify-center">
                     <div className="flex space-x-4">
                       {navLinks.map((navLink) =>(
-                         <a href={navLink.link} className="tab">{navLink.title}</a>
+                         <a href={navLink.link} key={navLink.id} className="tab">{navLink.title}</a>
                       ))}
                     </div>
                   </div>
