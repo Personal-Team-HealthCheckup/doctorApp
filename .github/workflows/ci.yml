@@ -21,15 +21,23 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     
-    - name: yarn install
+    - name: Install Dependencies
       run: |
-        yarn
-    - name: yarn test
+        yarn install
+    
+    - name: Run Tests
       run: |
         yarn test 
       env:
         CI: true
-      
-    - name: yarn build
+    
+    - name: Build Project
       run: |
         yarn run build --if-present
+
+    - name: Deploy to Vercel
+      env:
+        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      run: |
+        npm install -g vercel
+        vercel --prod --token=$VERCEL_TOKEN --confirm --scope your-vercel-scope
