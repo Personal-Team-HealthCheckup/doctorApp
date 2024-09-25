@@ -26,9 +26,11 @@ const config: Config = {
       info: "#000000B2",
       "black-300":"#333333",
       "black-500":"#555555",
+      "primary-grey":"rgba(0,126,135,50%)",
     },
     extend: {
       backgroundImage: {
+        serviceBackImage: "linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),url(/images/servicepagebanner.png)",
         'banner-pattern': "url(/images/backGroundBanner.svg)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

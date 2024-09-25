@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import TextInput from './common/TextInput'
 
 const FindDoctor = () => {
- const [isAvailable, setisAvailable] = useState(true)
+ const [isAvailable, setIsAvailable] = useState(true)
  const toggle=()=>{
-setisAvailable(!isAvailable)
+    setIsAvailable(!isAvailable)
  }
   return (
       <section className="w-full">
@@ -17,7 +17,7 @@ setisAvailable(!isAvailable)
               <div className="flex justify-between items-center flex-wrap gap-2 lg:gap-0 ">
                   <TextInput placeholder='Name' />
                   <TextInput placeholder='Speciality' />
-                  <TextInput type='checkbox' lableName='Available' checked={isAvailable} toggle={toggle} />
+                  <TextInput  testID="switch" type='checkbox' lableName='Available' checked={isAvailable} toggle={toggle} />
                   <button className="button-login !font-normal !font-DM_Sans">Search</button>
               </div>
           </div>

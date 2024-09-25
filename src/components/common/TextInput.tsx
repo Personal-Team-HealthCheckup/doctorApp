@@ -3,11 +3,12 @@ interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<H
 lableName?:string,
 checked?:boolean,
 toggle?:()=>void;
+"testID"?:string
 }
 
 const TextInput:React.FC<InputProps> = (props) => {
   return ( props.type === 'checkbox' ? <label className="inline-flex items-center me-5 cursor-pointer gap-4">
-    <input type="checkbox" value="" className="sr-only peer" checked={props.checked} onChange={props.toggle} />
+    <input type="checkbox" data-testid={props["testID"]} className="sr-only peer" checked={props.checked} onChange={props.toggle} />
     <span className="text-xl font-DM_Sans font-normal text-black dark:text-black ">{props.lableName}</span>
     <div className="relative w-11 h-6 bg-white rounded-full border peer-focus: border-primary border-solid  peer-focus:ring-4 peer-focus:ring-primary dark:peer-focus:ring-primary
      dark:bg-primary peer-checked:after:translate-x-full 

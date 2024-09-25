@@ -4,10 +4,10 @@ import React from "react";
 import { usePathname } from 'next/navigation'
 const navLinks = [
   { id: 1, title: "Home", link: "/" },
-  { id: 1, title: "Service", link: "/Service" },
-  { id: 2, title: "Contact Us", link: "/Contact" },
-  { id: 2, title: "Help", link: "/Help" },
-  { id: 2, title: "Blog", link: "/Blog" },
+  { id: 2, title: "Service", link: "/Service" },
+  { id: 3, title: "Contact Us", link: "/Contact" },
+  { id: 4, title: "Help", link: "/Help" },
+  { id: 5, title: "Blog", link: "/Blog" },
 ];
 const Header =()=> {
   const pathName = usePathname()
