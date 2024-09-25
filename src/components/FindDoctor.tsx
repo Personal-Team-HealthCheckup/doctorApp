@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import TextInput from './common/TextInput'
 
 const FindDoctor = () => {
- const [isAvailable, setisAvailable] = useState(true)
+ const [isAvailable, setIsAvailable] = useState(true)
  const toggle=()=>{
-setisAvailable(!isAvailable)
+    setIsAvailable(!isAvailable)
  }
   return (
       <section className="w-full">
