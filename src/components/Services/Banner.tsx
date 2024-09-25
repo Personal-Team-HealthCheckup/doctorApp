@@ -1,7 +1,4 @@
 import React from "react";
-import {
-  ServicepageBanner,
-} from "@/public/images/assets";
 
 const Banner = () => {
   return (
