@@ -1,20 +1,13 @@
 import React from "react";
-import Image from "next/image";
 import {
-  profileImg,
   ServicepageBanner,
-  videoIconImg,
 } from "@/public/images/assets";
 
 const Banner = () => {
-  console.log(ServicepageBanner.default.src);
   return (
     <section className="w-full ">
       <div
-        className="w-full md:container mx-auto px-4 bg-local bg-cover bg-center h-[90vh]		"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),url('${ServicepageBanner.default.src}')`,
-        }}
+        className="w-full md:container mx-auto px-4 bg-local bg-cover bg-center h-[90vh]	bg-serviceBackImage	"
       >
         <div className="grid grid-cols-12 gap-4 h-[100%] ">
           <div className="col-span-12 md:col-span-6 flex flex-col justify-center  ml-[195px]">
