@@ -28,7 +28,7 @@ jobs:
     
     - name: Run Tests
       run: |
-        yarn test 
+        yarn test --coverage
       env:
         CI: true
     
@@ -43,6 +43,7 @@ jobs:
           -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
           -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
           -Dsonar.exclusions=**/*.test.tsx,**/__tests__/**
+          -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
