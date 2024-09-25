@@ -26,6 +26,7 @@ const config: Config = {
       info: "#000000B2",
       "black-300":"#333333",
       "black-500":"#555555",
+      "primary-grey":"rgba(0,126,135,50%)",
     },
     extend: {
       backgroundImage: {

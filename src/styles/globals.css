@@ -45,6 +45,13 @@
   .button-login{
     @apply text-white bg-primary hover:bg-transparent  hover:text-primary  font-tara  font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2;
   }
+  .button-primary{
+    @apply text-white bg-primary hover:bg-transparent  hover:text-primary  font-DM_Sans font-bold rounded-3xl text-[1.13rem] py-3 px-5;
+  }
+  .button-primary-hover{
+    @apply bg-white text-primary font-DM_Sans font-bold rounded-3xl text-[1.13rem] py-3 px-5;
+   
+  }
   .banner-box-2{
     @apply bg-transparent bg-banner-pattern h-screen bg-contain bg-no-repeat bg-center  flex align-middle justify-center ;
   }
@@ -56,5 +63,9 @@
   }
   .tabMobileActive{
     @apply block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white;
+  }
+  .imagebannerService{
+    @apply w-full h-auto rounded-lg  ;
+    box-shadow: 0px 4px 4px 0px #00000040;
   }
 }
