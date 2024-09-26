@@ -21,18 +21,18 @@ DoctorApp is a modern web application built using **React**, **Next.js**, and **
 
 1. Clone the repository:
 
-   ```
-   git clone https://github.com/yourusername/doctorAppWep.git
-   ```
+  
+    ```git clone https://github.com/Personal-Team-HealthCheckup/doctorApp.git```
+   
 2. Install dependencies:
-```
-    cd doctorAppWep
-    npm install
-	```
+
+    ```` cd doctorAppWep
+    npm install ````
+	
 3. Start the development server:
-   ```
-    npm run dev
-```
+   
+    ```npm run dev```
+
 
 🌐 Deployment (Vercel)
 This project uses Vercel for automatic deployments. Every push to the main branch triggers a deployment pipeline.
@@ -52,14 +52,14 @@ Steps to Deploy on Vercel:
 This project includes unit tests written using Jest and React Testing Library.
 
 To run the tests:
-```
-npm run test
-```
+
+```npm run test```
+
 To generate test coverage:
 
-```
-npm run test --coverage
-```
+
+```npm run test --coverage```
+
 📱 Join the Community
 Stay updated with the latest features and discussions:
 
