@@ -2,7 +2,7 @@ import { TeamMembersData } from '@/src/utils/data'
 import Image from 'next/image'
 import React from 'react'
 
-function ResponsiveCard({ profileImage, name: title, designation, description, links, id }: TeamMembersData) {
+function ResponsiveCard({ profileImage, name: title, designation, description, links, id }:  Readonly<TeamMembersData>) {
   return (
     <div key={id} className="w-full max-w-sm bg-white border border-white-500 rounded-lg shadow px-4 pt-5 ">
     <div className="flex flex-col items-center  gap-2 pb-10">
