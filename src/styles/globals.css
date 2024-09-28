@@ -69,6 +69,7 @@
     box-shadow: 0px 4px 4px 0px #00000040;
   }
   .icon-button{
-    @apply  w-10 h-10 bg-primary-grey-100 rounded-lg flex justify-center items-center ;
+    transition: .5s linear;
+    @apply  w-10 h-10 bg-primary-grey-100 rounded-lg flex justify-center items-center  hover:-translate-y-4;
   }
 }
