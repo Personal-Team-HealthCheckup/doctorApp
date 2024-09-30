@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { searviceImage } from '../../public/images/assets';
 import TeamMember from '../components/TeamMember';
 
+
 interface HomePageProps {
 
 }
